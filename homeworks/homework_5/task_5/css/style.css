@@ -1,0 +1,21 @@
+* {
+    font-family: sans-serif;
+}
+
+.container {
+    margin: auto;
+    width: 800px;
+}
+
+.title {
+    display: flex;
+}
+
+h3 {
+    width: 90%;
+}
+
+button {
+    height: 30px;
+    margin: auto;
+}

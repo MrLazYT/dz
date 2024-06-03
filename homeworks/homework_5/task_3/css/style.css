@@ -1,0 +1,12 @@
+.container {
+    width: 400px;
+}
+
+.show {
+    height: 100px;
+}
+
+.hide {
+    height: 0;
+    overflow: hidden;
+}
