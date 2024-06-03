@@ -1,0 +1,10 @@
+.form-row {
+    display: grid;
+    margin: 10px;
+}
+
+.form-signin {
+    width: 40%;
+    margin: auto;
+    padding: 30px;
+}

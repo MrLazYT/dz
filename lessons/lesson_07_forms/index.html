@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="body">
+    <form name="signinForm" onsubmit="formSubmit(event)" class="form-signin" action="" method="GET" required>
+        <div class="form-row" onclick="console.log(event)">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="text">
+        </div>
+
+        <div class="form-row">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" required>
+        </div>
+
+        <div class="form-row">
+            <label for="phone1">Phones</label>
+
+            <div>
+                <input id="add_btn" style="margin: 5px 0px;" type="button" value="add">
+            </div>
+
+            <div id="phones" style="display: grid;">
+                <div>
+                    <input id="colorInput" type="color">
+                    <input type="button" value="Change" onclick="changeColor()">
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="form-row">
+            <input style="margin:10px" value="Login" type="submit">
+            <input style="margin:10px" value="Clear" type="reset">
+        </div>
+    </form>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
