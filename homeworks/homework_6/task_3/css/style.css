@@ -1,0 +1,116 @@
+* {
+    font-family: sans-serif;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.colors {
+    display: flex;
+    width: 1116px;
+    flex-wrap: wrap;
+    padding: 10px;
+    border: solid 1px lightgrey;
+    border-radius: 5px;
+}
+
+.color {
+    margin: 10px;
+    width: 100px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.black {
+    background-color: black;
+    border: solid 2px rgb(41, 41, 41);
+}
+
+.grey {
+    background-color: grey;
+    border: solid 2px lightgrey;
+}
+
+.lightgrey {
+    background-color: lightgrey;
+    border: solid 2px rgb(233, 233, 233);
+}
+
+.white {
+    background-color: whitesmoke;
+    border: solid 2px lightgrey;
+}
+
+.brown {
+    background-color: brown;
+    border: solid 2px rgb(180, 91, 91);
+}
+
+.lightbrown {
+    background-color: rgb(155, 71, 71);
+    border: solid 2px rgb(194, 102, 102);
+}
+
+.red {
+    background-color: red;
+    border: solid 2px rgb(235, 91, 91);
+}
+
+.pink {
+    background-color: pink;
+    border: solid 2px rgb(255, 166, 179);
+}
+
+.blanchedalmond {
+    background-color: blanchedalmond;
+    border: solid 2px rgb(255, 227, 184);
+}
+
+.yellow {
+    background-color: yellow;
+    border: solid 2px gold;
+}
+
+.green {
+    background-color: green;
+    border: solid 2px darkgreen;
+}
+
+.lightgreen {
+    background-color: lightgreen;
+    border: solid 2px greenyellow;
+}
+
+.lightblue {
+    background-color: lightblue;
+    border: solid 2px lightskyblue;
+}
+
+.blue {
+    background-color: dodgerblue;
+    border: solid 2px lightblue;
+}
+
+.purple {
+    background-color:indigo;
+    border: solid 2px rgb(142, 44, 212);
+}
+
+.cadetblue {
+    background-color: cadetblue;
+    border: solid 2px lightblue;
+}
+
+.lightpink {
+    background-color:lightpink;
+    border: solid 2px rgb(235, 158, 171);
+}
+
+.violet {
+    background-color: violet;
+    border: solid 2px rgb(243, 106, 243);
+}
