@@ -29,7 +29,7 @@ input {
     text-wrap: wrap;
 }
 
-.comment {
+.textarea_comment {
     width: 100%;
     height: 120px;
 }
