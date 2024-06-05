@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1 style="text-align: center;">Registration</h1>
+
+    <form class="center_form" onsubmit="validateForm(event)">
+        <div class="form_row">
+            <div class="row">
+                <label for="email">Email:</label>
+                <label class="error" id="emailError" hidden></label>
+            </div>
+
+            <input id="email" name="email" type="email">
+        </div>
+
+        <div class="form_row">
+            <div class="row">
+                <label for="password">Password:</label>
+                <label class="error" id="passwordError" hidden></label>
+            </div>
+
+            <input id="password" name="password" type="password">
+        </div>
+
+        <div class="form_row">
+            <div class="row">
+                <label for="confirmPassword">Repeat:</label>
+                <label class="error" id="confirmPasswordError" hidden></label>
+            </div>
+
+            <input id="confirmPassword" name="password" type="password">
+        </div>
+
+        <div class="form_row">
+            <input type="submit" value="Sign Up">
+        </div>
+    </form>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

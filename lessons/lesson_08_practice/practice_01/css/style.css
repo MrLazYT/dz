@@ -1,0 +1,36 @@
+* {
+    font-family: sans-serif;
+}
+
+.center_form {
+    width: 10%;
+    margin: auto;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+}
+
+.error {
+    display: inline-block;
+    text-align: end;
+    color: red;
+}
+
+label {
+    width: 200px;
+    text-align: start;
+}
+
+input {
+    text-align: start   ;
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input[type=submit]
+{
+    width: 208px;
+}
