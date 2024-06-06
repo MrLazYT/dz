@@ -8,18 +8,20 @@
 </head>
 <body>
     <div class="container">
-        <div class="color_picker">
-            <label for="red_picker">R</label>
-            <input id="red_picker" name="red_picker" type="text">
-
-            <label for="green_picker">G</label>
-            <input id="green_picker" name="green_picker" type="text">
-
-            <label for="blue_picker">B</label>
-            <input id="blue_picker" name="blue_picker" type="text">
-        </div>
-
-        <button>Add color</button>
+        <form onsubmit="prevent(event)">
+            <div class="color_picker">
+                <label for="red_picker">R</label>
+                <input id="red_picker" name="red_picker" type="text">
+    
+                <label for="green_picker">G</label>
+                <input id="green_picker" name="green_picker" type="text">
+    
+                <label for="blue_picker">B</label>
+                <input id="blue_picker" name="blue_picker" type="text">
+            </div>
+    
+            <button>Add color</button>
+        </form>
 
         <div class="colors">
             <div class="color">

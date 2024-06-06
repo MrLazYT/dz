@@ -1,3 +1,7 @@
+function prevent(e) {
+    e.preventDefault();
+}
+
 let button = document.querySelector("button");
 
 button.addEventListener("click", function() {

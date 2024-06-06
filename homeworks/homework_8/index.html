@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="addcolor(event)">
+            <h3>Create new color</h3>
+
+            <div class="row">
+                <label for="name_input">Name:</label>
+                <input id="name_input" name="name_input" type="text">
+                <label id="name_error" class="error"></label>
+            </div>
+
+            <div class="row">
+                <label for="color_type">Type:</label>
+                <select id="color_type" name="color_type">
+                    <option value="rgb">RGB</option>
+                    <option value="rgba">RGBA</option>
+                    <option value="hex">HEX</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <label for="code_input">Color:</label>
+                <input id="code_input" name="code_input" type="text">
+                <label id="code_error" class="error"></label>
+            </div>
+
+            <button>Save</button>
+
+            <h3>All colors</h3>
+        </form>
+
+        <div class="colors">
+            <div class="color"  style="background-color: rgb(154, 205, 50);">
+                <div class="color_box">
+                    <p id="color_name">Yellowgreen</p>
+                    <p id="color_type">RGB</p>
+                    <p id="color_code">154, 205, 50</p>
+                </div>
+            </div>
+
+            <div class="color" style="background-color: rgba(0, 139, 139, 1);">
+                <div class="color_box">
+                    <p id="color_name">Darkcyan</p>
+                    <p id="color_type">RGBA</p>
+                    <p id="color_code">0, 139, 139, 1</p>
+                </div>
+            </div>
+
+            <div class="color"  style="background-color: #FF4500;">
+                <div class="color_box">
+                    <p id="color_name">Orangered</p>
+                    <p id="color_type">HEX</p>
+                    <p id="color_code">#FF4500</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
