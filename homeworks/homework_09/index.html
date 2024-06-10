@@ -8,41 +8,81 @@
 </head>
 <body onload="loadHandler()">
     <header>
-        <h3 id="hello_msg"></h3>
-        <a href="/registration/" onclick="exit(event)">exit</a>
+        <div class="user">
+            <h3 id="hello_msg"></h3>
+            <a href="/registration/" onclick="exit(event)">exit</a>
+        </div>
     </header>
 
     <hr>
 
     <h1>User Info</h1>
 
-    <form>
+    <form onsubmit="submitHandler(event)">
         <div class="row">
             <div class="column">
-                <label for="firstname">First Name:</label>
+                <div class="row">
+                    <label for="firstname">First Name:</label>
+                    <label class="error" id="firstname_error" hidden>sdf</label>
+                </div>
                 <input type="text" id="firstname" name="firstname">
             </div>
             
             <div class="column">
-                <label for="lastname">Last Name:</label>
+                <div class="row">
+                    <label for="lastname">Last Name:</label>
+                    <label class="error" id="lastname_error" hidden></label>
+                </div>
                 <input type="text" id="lastname" name="lastname">
             </div>
         </div>
 
         <div class="row">
             <div class="column">
-                <label for="birthday">Year of birth:</label>
+                <div class="row">
+                    <label for="birthday">Year of birth:</label>
+                    <label class="error" id="birthday_error" hidden></label>
+                </div>
+                
                 <input type="text" id="birthday" name="birthday">
             </div>
             
             <div class="column">
-                <label for="gender">Gender:</label>
+                <div class="row">
+                    <label for="gender">Gender:</label>
+                </div>
+
                 <select name="gender" id="gender">
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                 </select>
             </div>
         </div>
+
+        <div class="row">
+            <div class="column">
+                <div class="row">
+                    <label for="phone">Phone Number:</label>
+                    <label class="error" id="phone_error" hidden></label>
+                </div>
+                
+                <input id="phone" name="phone" type="text">
+            </div>
+
+            <div class="column">
+                <div class="row">
+                    <label for="skype">Skype:</label>
+                    <label class="error" id="skype_error" hidden></label>
+                </div>
+
+                <input id="skype" name="skype" type="text">
+            </div>
+        </div>
+
+        <div class="column">
+            <input type="submit" value="Save"></input>
+        </div>
+
     </form>
 
     <script src="js/main.js"></script>
