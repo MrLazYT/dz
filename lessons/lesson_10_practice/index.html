@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="col">
+            <div class="row">
+                <label>Enter JSON data: </label>
+                <label id="error_label"></label>
+            </div>
+
+            <div class="row">
+                <textarea id="json"></textarea>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="fill_row">
+            </div>
+
+            <div class="row">
+                <button onclick="clickHandler()">→</button>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="row">
+                <label>Formatted JSON data:</label>
+            </div>
+            
+            <div class="row">
+                <textarea id="formatted_json" readonly></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
