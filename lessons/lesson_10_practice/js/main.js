@@ -1,7 +1,7 @@
 function clickHandler() {
     let json_error = document.getElementById("error_label");
 
-    json_error.innerText = "";;
+    json_error.innerText = "";
 
     let json = document.getElementById("json");
 
