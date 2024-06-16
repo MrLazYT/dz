@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 11</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="submitHandler(event)">
+            <h3>Search</h3>
+            
+            <div class="search_box">
+                <div class="row">
+                    <label for="title">Title</label>
+                    <input id="title" name="title" type="text">
+                </div>
+                
+                <div class="row">
+                    <label for="type">Type</label>
+                    <select id="type" name="type">
+                        <option value="movie">Movie</option>
+                        <option value="series">Series</option>
+                        <option value="episode">Episode</option>
+                        <option value="game">Game</option>
+                    </select>
+                </div>
+    
+                <div class="row">
+                    <button>Search</button>
+                </div>
+            </div>
+        </form>
+
+        <h3>Films</h3>
+
+        <div id="items" class="items">
+        </div>
+
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
