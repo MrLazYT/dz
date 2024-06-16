@@ -1,13 +1,20 @@
+let curPage = 1;
+
 function submitHandler(e) {
     e.preventDefault();
+    clearItems();
     searchData();
+}
+
+function clearItems() {
+    let items_div = document.getElementById("items");
+    items_div.innerText = "";
 }
 
 function searchData() {
     let title = document.getElementById("title").value;
     let type = document.getElementById("type").value;
-
-    const url = `http://www.omdbapi.com/?apikey=6742cabc&s=${title}&type=${type}`;
+    const url = `http://www.omdbapi.com/?apikey=6742cabc&s=${title}&type=${type}&page=${curPage}`;
 
     let request = new XMLHttpRequest();
     request.open("GET", url);
@@ -17,11 +24,7 @@ function searchData() {
             const items = JSON.parse(request.response);
             
             createElements(items.Search);
-            
-            console.log(items);
-        }
-        else {
-            console.log("ff")
+            createPagBtns(items.totalResults);
         }
     }
     
@@ -34,7 +37,6 @@ function createElements(items) {
     let items_div = document.getElementById("items");
 
     for (let i = 0; i < items.length; i++) {
-        console.log("dd");
         let div = document.createElement("div");
         div.classList.add("item");
 
@@ -53,4 +55,54 @@ function createElements(items) {
 
         items_div.appendChild(div);
     }
+}
+
+function createPagBtns(total) {
+    let buttons = document.querySelector(".buttons");
+    buttons.innerText = "";
+    let btn_count = Math.ceil(total / 10);
+
+    let prev_btn = document.createElement("button");
+    prev_btn.classList.add("pag_btn");
+    prev_btn.innerText = "<";
+    
+    prev_btn.addEventListener("click", function() {
+        if (curPage > 1) {
+            curPage--;
+            clearItems();
+            searchData();
+        }
+    });
+
+    buttons.appendChild(prev_btn);
+
+    for (let i = 0; i < btn_count; i++) {
+        let btn = document.createElement("button");
+        btn.innerText = i + 1;
+        btn.classList.add("pag_btn");
+        
+        btn.addEventListener("click", function() {
+            if (curPage != this.innerText) {
+                curPage = this.innerText;
+                clearItems();
+                searchData();
+            }
+        });
+
+        buttons.appendChild(btn);
+    }
+
+    let next_btn = document.createElement("button");
+    next_btn.classList.add("pag_btn");
+    next_btn.innerText = ">";
+
+    next_btn.addEventListener("click", function() {
+        if (curPage < btn_count) {
+            curPage++;
+            clearItems();
+            searchData();
+        }
+    });
+
+    buttons.appendChild(next_btn);
 }

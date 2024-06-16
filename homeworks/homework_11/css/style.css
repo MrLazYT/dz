@@ -26,7 +26,7 @@ form {
 .items {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    justify-content: center;
 }
 
 .item {
@@ -41,6 +41,27 @@ form {
 .item:hover {
     border: solid 1px #858585;
     width: 260px;
+}
+
+.buttons {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.pag_btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 0px;
+}
+
+.pag_btn:first-child {
+    border-radius: 5px 0px 0px 5px;
+}
+
+.pag_btn:last-child {
+    border-radius: 0px 5px 5px 0px;
 }
 
 h3 {
