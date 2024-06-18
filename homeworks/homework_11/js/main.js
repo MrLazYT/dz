@@ -17,14 +17,26 @@ function searchData() {
     const url = `http://www.omdbapi.com/?apikey=6742cabc&s=${title}&type=${type}&page=${curPage}`;
 
     let request = new XMLHttpRequest();
+    
     request.open("GET", url);
     
     request.onload = () => {
         if (request.status === 200) {
-            const items = JSON.parse(request.response);
-            
-            createElements(items.Search);
-            createPagBtns(items.totalResults);
+            let not_found_text = document.getElementById("not_found");
+
+            try {
+                const items = JSON.parse(request.response);
+                
+                not_found_text.classList.add("hidden");
+
+                console.log(items);
+
+                createElements(items.Search);
+                createPagBtns(items.totalResults);
+            }
+            catch {
+                not_found_text.classList.remove("hidden");
+            }
         }
     }
     
@@ -48,10 +60,22 @@ function createElements(items) {
         
         let type = document.createElement("p");
         type.innerText = items[i].Type;
+
+        let details_btn = document.createElement("button");
+        details_btn.innerText = "Details";
+        details_btn.addEventListener("click", function() {
+            document.cookie = `poster=${items[i].Poster}; path=/`;
+            document.cookie = `title=${items[i].Title}; path=/`;
+            document.cookie = `year=${items[i].Year}; path=/`;
+            document.cookie = `type=${items[i].Type}; path=/`;
+
+            document.location.href = "/info";
+        })
         
         div.appendChild(img);
         div.appendChild(title);
         div.appendChild(type);
+        div.appendChild(details_btn);
 
         items_div.appendChild(div);
     }

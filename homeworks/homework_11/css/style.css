@@ -64,6 +64,10 @@ form {
     border-radius: 0px 5px 5px 0px;
 }
 
+.hidden {
+    display: none;
+}
+
 h3 {
     text-align: center;
 }
